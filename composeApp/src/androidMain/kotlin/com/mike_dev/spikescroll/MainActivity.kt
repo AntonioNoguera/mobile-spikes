@@ -28,7 +28,28 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MiPantalla()
+            MainScreen()
+        }
+    }
+}
+@Composable
+fun MainScreen() {
+    var showNestedScrollDemo by remember { mutableStateOf(false) }
+
+    if (showNestedScrollDemo) {
+        NestedScrollDemoScreen(
+            onBack = { showNestedScrollDemo = false }
+        )
+    } else {
+        // Tu pantalla normal
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Button(onClick = { showNestedScrollDemo = true }) {
+                Text("Ver Demo Nested Scroll")
+            }
         }
     }
 }
