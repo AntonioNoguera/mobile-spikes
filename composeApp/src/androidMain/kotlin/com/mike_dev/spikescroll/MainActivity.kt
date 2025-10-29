@@ -20,11 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import com.mike_dev.spikescroll.background_video.VideoBackgroundScreen
-import com.mike_dev.spikescroll.component_bitmap.GenerateBitmapScreen
-import com.mike_dev.spikescroll.meta.InstagramStoryScreen
-import com.mike_dev.spikescroll.meta.ShareOnlineImageScreen
+import com.mike_dev.spikescroll.component_bitmap.RenderOffscreenToPngScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            GenerateBitmapScreen()
+            RenderOffscreenToPngScreen()
         }
     }
 }

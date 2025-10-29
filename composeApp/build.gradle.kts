@@ -22,6 +22,7 @@ kotlin {
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
             implementation("io.coil-kt:coil-compose:2.6.0")
             implementation("io.coil-kt:coil:2.6.0")
+            implementation("androidx.compose.ui:ui:1.7.0")
 
             implementation("androidx.compose.foundation:foundation:1.6.0")
             implementation("androidx.compose.material3:material3:1.2.0")
